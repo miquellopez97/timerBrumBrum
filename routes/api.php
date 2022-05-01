@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GamedataController;
 use App\Http\Controllers\TimelapController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -17,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('/timelap', TimelapController::class);
 Route::get('/record', [TimelapController::class, 'record']);
+
+Route::resource('/data', GamedataController::class);
