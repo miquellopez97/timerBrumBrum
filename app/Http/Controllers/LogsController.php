@@ -18,4 +18,11 @@ class LogsController extends Controller
         $log = Logs::create($request->all());
         return response()->json($log, 201);
     }
+
+    public function show($user)
+    {
+        $log = Logs::where('user', $user)->get();
+
+        return response()->json($log, 200);
+    }
 }

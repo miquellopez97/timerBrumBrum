@@ -27,11 +27,6 @@ class GamedataController extends Controller
         return response()->json($data, 200);
     }
 
-    public function update()
-    {
-        //
-    }
-
     public function destroy($id)
     {
         $data = Gamedata::find($id);

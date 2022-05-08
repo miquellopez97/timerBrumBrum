@@ -10,6 +10,7 @@ class Logs extends Model
     protected $connection = 'mongodb';
 
     protected $fillable = [
+        'user',
         'checkPoint1',
         'checkPoint2',
         'checkPoint3',

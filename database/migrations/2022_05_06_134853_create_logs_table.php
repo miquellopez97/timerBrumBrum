@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('logs', function (Blueprint $table) {
             $table->id();
 
+            $table->string('user');
             $table->boolean('checkPoint1');
             $table->boolean('checkPoint2');
             $table->boolean('checkPoint3');
