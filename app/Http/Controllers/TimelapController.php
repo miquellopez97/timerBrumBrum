@@ -21,7 +21,10 @@ class TimelapController extends Controller
 
     public function show($userName)
     {
-        $user = Timelap::where('user', $userName)->get();
+        $user = Timelap::where('user', $userName)
+        ->orderBy('time', 'ASC')
+        ->take(1)
+        ->get();
 
         return response()->json($user, 200);
     }
